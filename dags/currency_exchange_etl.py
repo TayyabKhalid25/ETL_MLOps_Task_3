@@ -101,7 +101,7 @@ with DAG(
     dag_id="currency_exchange_etl",
     default_args=default_args,
     description="Daily ETL pipeline extracting Frankfurter API currency rates into MongoDB",
-    schedule_interval="@daily",
+    schedule="@daily",
     start_date=datetime(2026, 11, 1),
     catchup=False,
     tags=["etl", "currency", "mongodb", "frankfurter"],
